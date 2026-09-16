@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instant Site Search shows no results or the wrong results</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 36px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #116dff; }
+  ol li, ul li { margin: 4px 0; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 18px 0 8px; }
+  .toc a { display: inline-block; margin: 2px 12px 2px 0; }
+  .note { background: #eff6ff; border-radius: 8px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Instant Site Search shows no results or the wrong results</h1>
+<p class="meta">Instant Site Search by operix · Help · Questions: <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a></p>
+
+<p>Visitors type into the search box and get nothing, an error line, or results that look wrong. Work through the causes below in order; the first three cover most cases.</p>
+
+<div class="toc">
+  <a href="#index">1. Wix Site Search app</a>
+  <a href="#types">2. Content types</a>
+  <a href="#indexing">3. New content</a>
+  <a href="#titles">4. Page titles</a>
+  <a href="#messages">5. Messages</a>
+  <a href="#typos">6. Typo correction</a>
+  <a href="#pro">7. Pro features</a>
+  <a href="#support">Support</a>
+</div>
+
+<h2 id="index">1. The Wix Site Search app is not installed</h2>
+<p>Instant Site Search does not build its own index. It reads the index that the <em>Wix Site Search</em> app (free, by Wix) keeps for your site. Without that app there is nothing to search.</p>
+<ol>
+  <li>In your Wix dashboard open <em>Apps → Instant Site Search</em>.</li>
+  <li>Look at the badge on the <em>Setup</em> card. <strong>Connected</strong> means the index answered. <strong>Search index unavailable</strong> means none of the six content types answered.</li>
+  <li>If it says <em>Search index unavailable</em>, add <em>Wix Site Search</em> from the App Market, then reload the app dashboard.</li>
+</ol>
+<p><em>Connected</em> with an "Unavailable: …" line under it means one or more types did not answer on that check; reload the page to check again. <em>Error</em> means the app itself could not be reached; try again in a minute.</p>
+
+<h2 id="types">2. The content type is unticked in the widget settings</h2>
+<p>The widget searches only the content types ticked in its settings panel. If products never show up, <em>Products</em> is probably unticked.</p>
+<ol>
+  <li>In the editor select the search box and open its settings panel.</li>
+  <li>Under <em>Search in</em> tick what you want searched: Products, Blog posts, Pages, Events, Services, Forum posts. At least one type always stays selected.</li>
+  <li><em>Results per content type</em> (1 to 20) only limits the preview; the rest sit behind each group's <em>Show all</em> link.</li>
+  <li>Publish the site.</li>
+</ol>
+
+<h2 id="indexing">3. The page or post is new</h2>
+<p>Products appear in results right away. New blog posts and pages usually show up within a minute of publishing. The app also keeps each answer for 60 seconds, so a search run just before publishing can repeat the old answer for up to a minute.</p>
+<div class="note">If a post is still missing after a few minutes, open it and check that it is published rather than saved as a draft.</div>
+
+<h2 id="titles">4. Page titles look like "Contact | My Shop Contact us for orders and…"</h2>
+<p>The Wix index stores each page's title with its SEO description glued on the end. Since version 1.22.0 the app cuts that tail off again: when a title ends with the first 12 or more characters of the description, the overlap is removed and the description shows as the snippet instead. Updates reach your site automatically; nothing to reinstall. If you still see a glued title, send the page address to support.</p>
+
+<h2 id="messages">5. What the messages under the search box mean</h2>
+<h3>"Could not load results. Please try again."</h3>
+<p>The app answered with an error, the request failed, or every content type timed out (each index call gets 4 seconds). It usually clears on the next try; if it stays, check the Setup badge as in step 1.</p>
+<h3>"Some results could not be loaded."</h3>
+<p>Most content types answered but one did not. The results shown are correct; search again in a minute for the rest.</p>
+<h3>"Too many searches. Please try again in a minute."</h3>
+<p>The site went over its search budget. Identical searches are served from a 60-second cache and do not count; fresh searches do, up to 600 per site per minute, with a smaller per-caller budget on the public route. Normal visitors do not reach this; a script does.</p>
+<h3>"Search is not set up for this site yet."</h3>
+<p>The app has not registered this site. Open <em>Apps → Instant Site Search</em> in the dashboard once, then reload the live page.</p>
+<h3>"No results for …"</h3>
+<p>The request worked and nothing matched. Check steps 2 and 3, then try a shorter word.</p>
+
+<h2 id="typos">6. Typo correction works for Korean only</h2>
+<p>When a Korean query returns nothing, the app looks for the closest term among nearby titles and searches for that instead; the panel then says "Showing results for: …" with the corrected word. This runs only for queries containing Hangul. For other languages the index's own fuzzy matching still catches small misspellings ("abstrat" still returns matches), but no correction hint appears.</p>
+
+<h2 id="pro">7. Synonyms, pinned results or featured suggestions do nothing</h2>
+<p>These are Pro features. On the Free plan you can still save synonyms and rules in the dashboard, but searches ignore them until the site is on Pro (a running free trial counts as Pro). After an upgrade the change reaches searches within a couple of minutes.</p>
+<p>On Pro, if a rule still seems ignored:</p>
+<ul>
+  <li>Synonyms and pins match the <em>whole</em> search term, lower-cased. A synonym for "couch" fires for "couch", not for "blue couch".</li>
+  <li>Pins apply to the first result list only, not to a <em>Show all</em> list, and never to a hidden item.</li>
+  <li>Hidden items are removed from every result list.</li>
+  <li>Edits reach visitors within about a minute of saving.</li>
+  <li>Limits: 200 rules and 20 featured suggestions per site.</li>
+</ul>
+
+<h2 id="support">Still stuck?</h2>
+<p>Email <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a> with your site address, the word you searched for and the line shown under the box. A screenshot of the Setup card in the app dashboard helps.</p>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="./index.html">Instant Site Search help home</a></li>
+  <li><a href="../privacy.html">Privacy Policy</a></li>
+  <li><a href="../terms.html">Terms of Use</a></li>
+</ul>
+
+<p class="meta" style="margin-top:40px">Instant Site Search by operix · <a href="./index.html">Help</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+</body>
+</html>

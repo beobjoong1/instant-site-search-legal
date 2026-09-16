@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to add instant search to a Wix site — Instant Site Search help</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 36px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #116dff; }
+  ol li, ul li { margin: 4px 0; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 18px 0 8px; }
+  .toc a { display: inline-block; margin: 2px 12px 2px 0; }
+  .note { background: #eff6ff; border-radius: 8px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Instant Site Search — Help</h1>
+<p class="meta">Instant search results for your Wix site · Questions: <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a></p>
+
+<p>Visitors leave when they cannot find a product or page quickly; this page covers adding the Instant Site Search box to your Wix site, its settings, how results are chosen, the dashboard, plans and privacy.</p>
+
+<div class="toc">
+  <a href="#start">Getting started</a>
+  <a href="#settings">Widget settings</a>
+  <a href="#results">How results work</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#plans">Free and Pro</a>
+  <a href="#privacy">Privacy</a>
+  <a href="#trouble">Troubleshooting</a>
+</div>
+
+<h2 id="start">Getting started (three steps)</h2>
+<ol>
+  <li><strong>Install the app</strong> from the <a href="https://www.wix.com/app-market/71050168-bbc0-4b49-87c0-7d0eee596fb9" target="_blank" rel="noopener">App Market</a>. Results come from Wix Site Search, a free Wix app; the dashboard's <em>Setup</em> card says <em>Search index unavailable</em> if it is missing.</li>
+  <li><strong>Add the search box.</strong> It is added automatically on install; to place it yourself, open the editor and choose <em>Add Elements → App Widgets → Instant Site Search</em>, then drop it into the header or any section.</li>
+  <li><strong>Publish the site.</strong> Products appear right away; new blog posts and pages usually show up within a minute of publishing.</li>
+</ol>
+
+<h2 id="settings">Widget settings</h2>
+<p>Open the widget's settings panel in the editor; publish again after changing anything.</p>
+<ul>
+  <li><strong>Placeholder text:</strong> the hint in the empty box. Default <em>Search…</em>.</li>
+  <li><strong>Accent color (hex):</strong> focus ring, highlights and links. Default <code>#116dff</code>.</li>
+  <li><strong>Results per content type:</strong> 1 to 20, default 6; <em>Show all</em> opens the rest.</li>
+  <li><strong>Search in:</strong> Products, Blog posts, Pages, Events, Services, Forum posts. At least one stays ticked.</li>
+  <li><strong>Text language:</strong> <em>Automatic (site language)</em> or English, Deutsch, Español, Français, Italiano, Nederlands, Português, 日本語, 한국어. Labels only; other languages fall back to English.</li>
+  <li><strong>Show result images:</strong> thumbnails next to results. Pages that all share one image lose theirs.</li>
+  <li><strong>Compact height:</strong> a 40 px box instead of 48 px.</li>
+  <li><strong>Dark style (for dark sections):</strong> dark box and results panel.</li>
+</ul>
+
+<h2 id="results">How results work</h2>
+<p>The widget searches about a quarter of a second after typing stops, across every content type you ticked. Results are grouped by type (<em>Products</em>, <em>Blog</em>, <em>Pages</em>, <em>Events</em>, <em>Services</em>, <em>Forum</em>) with a match count; <em>Show all N in Products →</em> opens one type, 20 at a time, with <em>Load more</em> and <em>← All results</em>.</p>
+<p>Ranking starts from the index score and favours titles that equal, start with or contain the query; sold-out products show <em>Sold out</em> and rank lower. The index matches fuzzily, so small misspellings usually still work. A Korean query with no match is retried with the closest word from your content, shown as <em>Showing results for: …</em>.</p>
+<p>On Pro the panel adds tabs (<em>All</em> plus one per matching type), <em>Suggestions:</em> chips while typing (featured terms, popular searches, then result titles; up to five), <em>Try:</em> chips in the empty box (up to eight) and a <em>Popular right now</em> list when nothing matched.</p>
+
+<h2 id="dashboard">Dashboard</h2>
+<p>The app's page in your Wix dashboard shows <em>Free plan</em> or <em>Pro plan</em> in its header, next to <em>Upgrade to Pro</em>.</p>
+<h3>Analytics</h3>
+<p>Every plan sees the last <em>30 days</em>; <em>90 days</em> is Pro. Tiles show <em>Searches</em>, <em>Zero-result rate</em>, <em>Avg. response</em> and <em>Unique queries</em>, with tables of <em>Top queries</em> and <em>Zero-result queries</em> (with <em>Map to a term</em> shortcuts into synonyms). A weekly box reads <em>This week: 42 searches (+7 vs. the week before)</em> and names what found nothing. <em>Export CSV</em> (Pro) downloads top queries, zero-result queries and daily counts. Only the latest 5,000 searches count.</p>
+<h3>Synonyms (Pro)</h3>
+<p>Enter a <em>Term</em> and <em>Synonyms (comma-separated)</em>, up to 20 per term, and click <em>Add</em>. Searching a term also searches its synonyms, and the other way round. Rows have an <em>Enabled</em> switch and <em>Delete</em>.</p>
+<h3>Featured suggestions (Pro)</h3>
+<p>Terms shown as visitors start typing and in the empty box; up to 20, 80 characters each. Click one to remove it.</p>
+<h3>Pinned results &amp; hidden items (Pro)</h3>
+<p>Type a <em>Search term</em>, click <em>Find items</em>, then <em>Pin for “term”</em> to put an item first for that term or <em>Hide</em> to drop it from every result list. Up to 200 rules.</p>
+<div class="note">You can prepare synonyms, suggestions and rules on the Free plan; they start applying once the site is on Pro. Edits reach visitors within about a minute.</div>
+
+<h2 id="plans">Free and Pro</h2>
+<p><strong>Free:</strong> search across all six content types, grouping, show-all paging, every widget setting and 30 days of analytics.</p>
+<p><strong>Pro ($7.99/month, or $6.49/month billed yearly):</strong> synonyms, featured suggestions, autocomplete, the popular-searches fallback, result-type tabs, pinned results and hidden items, 90-day history and CSV export. Upgrade from the dashboard; the plan belongs to one site.</p>
+
+<h2 id="privacy">Privacy</h2>
+<p>Searches are logged to a <em>Search Logs</em> collection in your own CMS: query, result count, response time, content types and time. No visitor names, IP addresses or device identifiers are stored.</p>
+<ul>
+  <li>If the visitor declined analytics in your consent banner, the widget sends <code>log=0</code>: the search runs but is not recorded.</li>
+  <li>Queries over 60 characters or eight words, or containing links or markup characters, are never logged.</li>
+  <li>Logging stops at 60 searches per minute per site, so busy minutes are a lower bound.</li>
+  <li>A query becomes a public suggestion only after three or more searches on two different days.</li>
+</ul>
+<p>Details: <a href="../privacy.html">Privacy Policy</a>.</p>
+
+<h2 id="trouble">Troubleshooting</h2>
+<ul>
+  <li><em>Search is not set up for this site yet.</em> — open the app dashboard once, then reload the page.</li>
+  <li><em>Too many searches. Please try again in a minute.</em> — a rate limit; wait a minute.</li>
+  <li><em>This needs the CMS app on your site (free).</em> — add CMS from the App Market and reload the dashboard.</li>
+</ul>
+<p>Step-by-step checks: <a href="./search-not-working.html">Search not working or showing no results</a>. Still stuck? Email <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a> with your site address and the query.</p>
+
+<h3>Related</h3>
+<ul>
+  <li><a href="./search-not-working.html">Search not working or showing no results</a></li>
+  <li><a href="../privacy.html">Privacy Policy</a></li>
+  <li><a href="../terms.html">Terms of Use</a></li>
+</ul>
+
+<p class="meta" style="margin-top:40px">Instant Site Search by operix · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+</body>
+</html>
